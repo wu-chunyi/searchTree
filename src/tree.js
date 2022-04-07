@@ -179,29 +179,31 @@ const SearchTree = () => {
       }}
     >
       <Input onChange={handleSearch} />
-      <Tree
-        showIcon
-        defaultExpandAll
-        expandedKeys={expands}
-        switcherIcon={<DownOutlined />}
-        treeData={treeData}
-        titleRender={(node) => {
-          return (
-            <span
-              style={{
-                background:
-                  searchKey && node?.title?.includes(searchKey)
-                    ? "skyblue"
-                    : "",
-                color:
-                  searchKey && node?.title?.includes(searchKey) ? "red" : "",
-              }}
-            >
-              {node?.title}
-            </span>
-          );
-        }}
-      />
+      <div style={{ flex: "1", minHeight: 0, overflow: "auto" }}>
+        <Tree
+          showIcon
+          defaultExpandAll
+          expandedKeys={expands}
+          switcherIcon={<DownOutlined />}
+          treeData={treeData}
+          titleRender={(node) => {
+            return (
+              <span
+                style={{
+                  background:
+                    searchKey && node?.title?.includes(searchKey)
+                      ? "skyblue"
+                      : "",
+                  color:
+                    searchKey && node?.title?.includes(searchKey) ? "red" : "",
+                }}
+              >
+                {node?.title}
+              </span>
+            );
+          }}
+        />
+      </div>
     </div>
   );
 };
