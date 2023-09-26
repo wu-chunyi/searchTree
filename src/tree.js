@@ -22,6 +22,7 @@ const data = [
   { title: "沙漠地图", key: 16, parent: 12 },
   { title: "公众号", key: 17, parent: 10 },
   { title: "群聊", key: 18, parent: 10 },
+  {title:"cc",key:23,parent:10},
   { title: "小程序", key: 19, parent: 10 },
   { title: "花木兰", key: 20, parent: 11 },
   { title: "芈月", key: 21, parent: 11 },
